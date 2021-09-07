@@ -35,7 +35,7 @@ print(event_distribution)
 df_demonstration = feature_and_target.sample(n=5, random_state = 12)
 demonstrationID_list = list(df_demonstration['SubjectID'])
 
-# The other 2046 subjects are used for feature selection & fitting
+# The other 2558 subjects are used for feature selection
 data_for_fitting = feature_and_target[~(feature_and_target['SubjectID'].isin(demonstrationID_list))].drop(columns = 'SubjectID')
 y = data_for_fitting[['status_opt']]
 
